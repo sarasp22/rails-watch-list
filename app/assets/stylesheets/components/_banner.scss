@@ -1,0 +1,12 @@
+.banner {
+  background-image: url("cinema.jpg");
+  background-repeat: no-repeat; /* non ripete l'immagine */
+  background-size: cover;       /* l'immagine copre tutto il banner */
+  background-position: center;  /* centra l'immagine */
+  height: 300px;                /* altezza del banner, cambia a piacere */
+  display: flex;
+  align-items: center;          /* centra verticalmente l'h1 */
+  justify-content: center;      /* centra orizzontalmente l'h1 */
+  color: white;                 /* testo visibile sull'immagine */
+  text-shadow: 1px 1px 4px black; /* opzionale, per migliorare leggibilità */
+}

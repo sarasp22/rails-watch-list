@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="title mb-3">
+    <h1><%= @list.name %></h1>
+    <%= link_to new_list_bookmark_path(@list), class: "button-82-pushable mt-3" do %>
+  <span class="button-82-shadow"></span>
+  <span class="button-82-edge"></span>
+  <span class="button-82-front">Add Bookmark</span> <!-- testo qui -->
+<% end %>
+
+    <%= link_to lists_path, class: "button-82-pushable mt-3" do %>
+  <span class="button-82-shadow"></span>
+  <span class="button-82-edge"></span>
+  <span class="button-82-front"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1"/></svg></span> <!-- testo qui -->
+<% end %>
+
+  </div>
+
+  <div class="cards-container">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card">
+        <h3><%= bookmark.movie.title %></h3>
+        <p>Rating: <%= bookmark.movie.rating %></p>
+
+        <% if bookmark.movie.poster_url.present? %>
+          <img src="<%= bookmark.movie.poster_url %>" alt="<%= bookmark.movie.title %> poster" style="max-width:200px;">
+        <% else %>
+          <p>No poster available</p>
+        <% end %>
+
+        <p><strong>Comment:</strong> <%= bookmark.comment %></p>
+
+<%= button_to list_bookmark_path(@list, bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "button-82-pushable" do %>
+  <span class="button-82-shadow"></span>
+  <span class="button-82-edge"></span>
+  <span class="button-82-front">Delete</span>
+<% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

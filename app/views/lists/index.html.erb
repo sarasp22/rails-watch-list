@@ -1,0 +1,17 @@
+<div class="container">
+<div class="container-flats row fullscreen">
+ <%= link_to new_list_path, class: "button-82-pushable mt-3" do %>
+  <span class="button-82-shadow"></span>
+  <span class="button-82-edge"></span>
+  <span class="button-82-front">Add List</span> <!-- testo qui -->
+<% end %>
+
+  <div class="card-container">
+    <% @lists.each do |list| %>
+      <div class="card-list">
+        <%= link_to list.name, list_path(list), class: "card-link" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+.container-flats {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card-container {
+   flex: 1;               /* prende tutto lo spazio rimanente */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-y: auto;       /* se ci sono troppe card scrolla */
+  padding: 20px;
+}
