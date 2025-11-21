@@ -3,19 +3,18 @@
 }
 
 .card {
-  width: 300px;      /* larghezza fissa */
-  height: auto;     /* altezza fissa */
+  width: 300px;
+  height: auto;
   background: #fff;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 16px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* evita contenuto schiacciato */
-  overflow: hidden; /* per sicurezza */
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .cards-container {
@@ -27,8 +26,7 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* spazio tra le card */
+  gap: 16px;
   justify-content: flex-start;
   padding-top: 10px;
 }
-
