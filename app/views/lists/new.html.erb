@@ -13,6 +13,7 @@
 <div class="form-container">
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit class: "button-82-pushable mt-3"%>
 <% end %>
 </div>
