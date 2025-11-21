@@ -9,10 +9,9 @@
   <div class="card-container">
     <% @lists.each do |list| %>
       <div class="card-list">
-
         <% if list.photo.attached? %>
         <%= link_to list.name, list_path(list), class: "card-link" %>
-          <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
         <% end %>
       </div>
     <% end %>
