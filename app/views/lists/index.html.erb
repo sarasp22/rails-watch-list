@@ -11,7 +11,7 @@
       <div class="card-list">
         <% if list.photo.attached? %>
         <%= link_to list.name, list_path(list), class: "card-link" %>
-<%= image_tag list.photo.variant(resize_to_fill: [400, 300]).processed %>
+          <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
         <% end %>
       </div>
     <% end %>
