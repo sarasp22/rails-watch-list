@@ -1,5 +1,9 @@
 .container {
-  text-align: center;
+  display: flex;
+  justify-content: center; /* centra orizzontalmente le card */
+  align-items: center;     /* centra verticalmente le card */
+  gap: 16px;               /* spazio tra le card */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -18,6 +22,9 @@
   overflow: hidden;
 }
 
+img {
+  border-radius: 10%;
+}
 
 .cards-container {
   display: flex;
